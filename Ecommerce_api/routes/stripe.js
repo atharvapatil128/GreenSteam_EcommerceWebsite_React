@@ -8,7 +8,7 @@ router.post("/payment", (req,res)=>{
         //source: req.body.tokenId,
         payment_method_types: ['card'],
         amount: req.body.amount,
-        currency: "usd",
+        currency: "inr",
     },(stripeErr, stripeRes)=>{
         if(stripeErr){
             res.status(500).json(stripeErr);
